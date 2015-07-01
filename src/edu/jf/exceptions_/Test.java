@@ -10,6 +10,7 @@ public class Test {
 			System.out.println(j/i);
 		} catch (ArithmeticException e) {
 			// TODO: handle exception
+			// ceci est un nouveau commentaire
 			
 			System.out.println("Division par zéro  " + e.getMessage());
 		}
