@@ -1,5 +1,5 @@
 package edu.jf.joo;
-
+//
 abstract class Animal {
 	
 	protected String couleur;
