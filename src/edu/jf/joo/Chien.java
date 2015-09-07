@@ -21,13 +21,13 @@ public Chien(){
 	@Override
 	public void faireCalin() {
 		// TODO Auto-generated method stub
-		System.out.println("Je te fais un GROS CÂLIN");   
+		System.out.println("Je te fais un GROS CALIN");   
 	}
 
 	@Override
 	public void faireLechouille() {
 		// TODO Auto-generated method stub
-		System.out.println("Je fais de grosses léchouilles...");
+		System.out.println("Je fais de grosses lÃ¨chouilles...");
 	}
 
 	@Override

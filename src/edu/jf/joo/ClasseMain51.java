@@ -1,6 +1,6 @@
 package edu.jf.joo;
 
-public class ClasseMain5 {
+public class ClasseMain51 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -22,11 +22,11 @@ public class ClasseMain5 {
 			      }
 			    }
 			                 
-			    //Il ne nous reste plus qu'à décrire tout notre tableau !
+			    //Il ne nous reste plus qu'ï¿½ dï¿½crire tout notre tableau !
 			    for(Object v : tableau){
 			     // System.out.println(v.decrisToi()+"\n");
-			     // Ne fonctionne pas car decrisToi() n'est pas définie pour la classe Object
-			     // il faut préciser 	:
+			     // Ne fonctionne pas car decrisToi() n'est pas dï¿½finie pour la classe Object
+			     // il faut prï¿½ciser 	:
 			    	System.out.println(((GVille2)v).decrisToi()+"\n"); // transtypage
 			    }
 

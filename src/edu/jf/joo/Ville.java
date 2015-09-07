@@ -6,20 +6,20 @@ public class Ville {
 	  String nomPays;
 	  int nbreHabitants;
 	  
-	  //Constructeur par défaut
+	  //Constructeur par dÃ©faut
 	  public Ville(){
-	    System.out.println("Création d'une ville !");      
+	    System.out.println("CrÃ©ation d'une ville !");      
 	    nomVille = "Inconnu";
 	    nomPays = "Inconnu";
 	    nbreHabitants = 0;
 	  } 
 	  
-	  //Constructeur avec paramètres
-	  //J'ai ajouté un « p » en première lettre des paramètres.
-	  //Ce n'est pas une convention, mais ça peut être un bon moyen de les repérer.
+	  //Constructeur avec paramÃ¨tres
+	  //J'ai ajoutÃ© un p en premiÃ¨re lettre des paramÃ¨tres.
+	  //Ce n'est pas une convention, mais ca peut Ãªtre un bon moyen de les repÃ©rer.
 	  public Ville(String pNom, int pNbre, String pPays)
 	  {
-	    System.out.println("Création d'une ville avec des paramètres !");
+	    System.out.println("CrÃ©ation d'une ville avec des paramÃ¨tres !");
 	    nomVille = pNom;
 	    nomPays = pPays;
 	    nbreHabitants = pNbre;

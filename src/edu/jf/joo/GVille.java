@@ -4,7 +4,7 @@ public class GVille {
 	
 	 
 	 
-	private String nomVille;
+	  private String nomVille;
 	  private String nomPays;
 	  private int nbreHabitants;
 	  private char categorie;
@@ -12,16 +12,16 @@ public class GVille {
 	//Variables publiques qui comptent les instances
 	  public static int nbreInstances = 0;
 
-	  //Variable privée qui comptera aussi les instances
+	  //Variable privï¿½e qui comptera aussi les instances
 	  private static int nbreInstancesBis = 0; 
 	  
 
 	  /**
 	 * @return the nbreInstances
-	 *  Toutes les méthodes de classe n'utilisant que des variables de classe doivent être déclarées static.
-	 *  On les appelle des méthodes de classe, car il n'y en a qu'une pour toutes vos instances. 
-	 *  Par contre ce n’est plus une méthode de classe si celle-ci utilise des variables d'instance en plus de 
-	 *  variables de classe…
+	 *  Toutes les mï¿½thodes de classe n'utilisant que des variables de classe doivent ï¿½tre dï¿½clarï¿½es static.
+	 *  On les appelle des mï¿½thodes de classe, car il n'y en a qu'une pour toutes vos instances. 
+	 *  Par contre ce nï¿½est plus une mï¿½thode de classe si celle-ci utilise des variables d'instance en plus de 
+	 *  variables de classeï¿½
 	 */
 	public static int getNbreInstancesBis() {
 		return nbreInstances;
@@ -87,34 +87,34 @@ public class GVille {
 
 	  
 	  
-	  //Constructeur par défaut
+	  //Constructeur par dï¿½faut
 	  public GVille(){
-	    System.out.println("Création d'une ville !");      
+	    System.out.println("CrÃ©ation d'une ville !");      
 	    nomVille = "Inconnu";
 	    nomPays = "Inconnu";
 	    nbreHabitants = 0;
 	    this.setCategorie();
-	  //On incrémente nos variables à chaque appel aux constructeurs
+	  //On incrï¿½mente nos variables ï¿½ chaque appel aux constructeurs
 	    nbreInstances++;
 	    nbreInstancesBis++;
 	  } 
 	  
-	  //Constructeur avec paramètres
-	  //J'ai ajouté un « p » en première lettre des paramètres.
-	  //Ce n'est pas une convention, mais ça peut être un bon moyen de les repérer.
+	  //Constructeur avec paramï¿½tres
+	  //J'ai ajoutï¿½ un ï¿½ p ï¿½ en premiï¿½re lettre des paramï¿½tres.
+	  //Ce n'est pas une convention, mais ï¿½a peut ï¿½tre un bon moyen de les repï¿½rer.
 	  public GVille(String pNom, int pNbre, String pPays)
 	  {
-	    System.out.println("Création d'une ville avec des paramètres !");
+	    System.out.println("CrÃ©ation d'une ville avec des paramÃ¨tres !");
 	    nomVille = pNom;
 	    nomPays = pPays;
 	    nbreHabitants = pNbre;
 	    this.setCategorie();
-	  //On incrémente nos variables à chaque appel aux constructeurs
+	  //On incrï¿½mente nos variables ï¿½ chaque appel aux constructeurs
 	    nbreInstances++;
 	    nbreInstancesBis++;
 	  } 
 	  
-	  //Définit la catégorie de la ville
+	  //Dï¿½finit la catï¿½gorie de la ville
 	  private void setCategorie() {
 	 
 	    int bornesSuperieures[] = {0, 1000, 10000, 100000, 500000, 1000000, 5000000, 10000000};
@@ -129,18 +129,18 @@ public class GVille {
 
 	  //Retourne la description de la ville
 	  public String decrisToi(){
-	    return "\t"+this.nomVille+" est une ville de "+this.nomPays+ ", elle comporte : "+this.nbreHabitants+" habitant(s) => elle est donc de catégorie : "+this.categorie;
+	    return "\t"+this.nomVille+" est une ville de "+this.nomPays+ ", elle comporte : "+this.nbreHabitants+" habitant(s) => elle est donc de catï¿½gorie : "+this.categorie;
 	  }
 
-	  //Retourne une chaîne de caractères selon le résultat de la comparaison
+	  //Retourne une chaï¿½ne de caractï¿½res selon le rï¿½sultat de la comparaison
 	  public String comparer(GVille v1){
 	    String str = new String();
 
 	    if (v1.getNbreHabitants() > this.nbreHabitants)
-	      str = v1.getNomVille()+" est une ville plus peuplée que "+this.nomVille;
+	      str = v1.getNomVille()+" est une ville plus peuplÃ©e que "+this.nomVille;
 	     
 	    else
-	      str = this.nomVille+" est une ville plus peuplée que "+v1.getNomVille();
+	      str = this.nomVille+" est une ville plus peuplÃ©e que "+v1.getNomVille();
 	     
 	    return str;
 	  }
