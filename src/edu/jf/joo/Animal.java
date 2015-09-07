@@ -18,7 +18,7 @@ abstract class Animal {
 	}
 	
 	public String toString() {
-		String str = "Je suis un objet de la " + this.getClass() + ", je suis " + this.couleur + ", je pèse " + this.poids;
+		String str = "Je suis un objet de la " + this.getClass() + ", je suis " + this.couleur + ", je pÃ¨se " + this.poids;
 	    return str;
 	}
 }

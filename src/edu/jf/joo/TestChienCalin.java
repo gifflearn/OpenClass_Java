@@ -4,8 +4,8 @@ public class TestChienCalin {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		 //Les méthodes d'un chien 
-	    Chien c = new Chien("Gris bleuté", 20);
+		 //Les mï¿½thodes d'un chien 
+	    Chien c = new Chien("Gris bleutÃ©", 20);
 	    c.boire();
 	    c.manger();
 	    c.deplacement();
@@ -13,7 +13,7 @@ public class TestChienCalin {
 	    System.out.println(c.toString());
 				
 	    System.out.println("--------------------------------------------");
-	    //Les méthodes de l'interface
+	    //Les mï¿½thodes de l'interface
 	    c.faireCalin();
 	    c.faireLeBeau();
 	    c.faireLechouille();

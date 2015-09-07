@@ -4,49 +4,65 @@ public abstract class Personnage {
 	
 	  // PAr default une personnage est pacifiste,ne donne aucun soin et marche
 	  //Nos instances de comportement
+	  // 
+	  // les variables d'instances 
+	  
+	  //1) des objets (Combatcouteau,Combats pistolets ....) de ( ou rÃ©fÃ©rencer par un )  "type" espritCombatif ( c'est une interface implemanter par ces objets )
+	  //
 	  protected EspritCombatif espritCombatif = new Pacifiste();
+	  //2) idem pour soin
 	  protected Soin soin = new AucunSoin();
+	  //3) idem pour dÃ©placement
 	  protected Deplacement deplacement = new Marcher();
 
-	  //Constructeur par défaut
+	  // Les constructeurs :
+	  //
+	  //Constructeur par dï¿½faut
 	  public Personnage(){}
 		
-	  //Constructeur avec paramètres
+	  //Constructeur avec paramï¿½tres
 	  public Personnage(EspritCombatif espritCombatif, Soin soin, Deplacement deplacement) {
 	    this.espritCombatif = espritCombatif;
 	    this.soin = soin;
 	    this.deplacement = deplacement;
 	  }
-		
-	  //Méthode de déplacement de personnage
+	  
+	  // Les mutateurs 
+	  //
+	  // les getters
+	  //
+	  //Mï¿½thode de dï¿½placement de personnage
 	  public void seDeplacer(){
-	    //On utilise les objets de déplacement de façon polymorphe
+	    //On utilise les objets de dï¿½placement de faï¿½on polymorphe
 	    deplacement.deplacer();
 	  }
 
-	  // Méthode que les combattants utilisent
+	  // Mï¿½thode que les combattants utilisent
 	  public void combattre(){
-	    //On utilise les objets de déplacement de façon polymorphe
+	    //On utilise les objets de dï¿½placement de faï¿½on polymorphe
 	    espritCombatif.combat();
 	  }
 		
-	  //Méthode de soin
+	  //Mï¿½thode de soin
 	  public void soigner(){
-	    //On utilise les objets de déplacement de façon polymorphe
+	    //On utilise les objets de dï¿½placement de faï¿½on polymorphe
 	    soin.soigne();
 	  }
 	  
-	  //Redéfinit le comportement au combat
+	  //
+	  // Les setters
+	  //
+	  //Redï¿½finit le comportement au combat
 	  public void setEspritCombatif(EspritCombatif espritCombatif) {
 	    this.espritCombatif = espritCombatif;
 	  }
 
-	  //Redéfinit le comportement de Soin
+	  //Redï¿½finit le comportement de Soin
 	  public void setSoin(Soin soin) {
 	    this.soin = soin;
 	  }
 
-	  //Redéfinit le comportement de déplacement
+	  //Redï¿½finit le comportement de dï¿½placement
 	  public void setDeplacement(Deplacement deplacement) {
 	    this.deplacement = deplacement;
 	  }

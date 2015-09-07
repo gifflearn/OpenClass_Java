@@ -15,7 +15,7 @@ class Loup extends Canin
 	
 	void crier() {
 		// TODO Auto-generated method stub
-	    System.out.println("Je hurle à la Lune en faisant ouhouh !"); 
+	    System.out.println("Je hurle Ã  la Lune en faisant ouhouh !"); 
 	}
 
 
