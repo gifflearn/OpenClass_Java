@@ -12,16 +12,16 @@ public class GVille2 {
 	// Variables publiques qui comptent les instances
 	public static int nbreInstances = 0;
 
-	// Variable privée qui comptera aussi les instances
+	// Variable privï¿½e qui comptera aussi les instances
 	protected static int nbreInstancesBis = 0;
 
 	/**
-	 * @return the nbreInstances Toutes les méthodes de classe n'utilisant que
-	 *         des variables de classe doivent être déclarées static. On les
-	 *         appelle des méthodes de classe, car il n'y en a qu'une pour
-	 *         toutes vos instances. Par contre ce n’est plus une méthode de
+	 * @return the nbreInstances Toutes les mï¿½thodes de classe n'utilisant que
+	 *         des variables de classe doivent ï¿½tre dï¿½clarï¿½es static. On les
+	 *         appelle des mï¿½thodes de classe, car il n'y en a qu'une pour
+	 *         toutes vos instances. Par contre ce nï¿½est plus une mï¿½thode de
 	 *         classe si celle-ci utilise des variables d'instance en plus de
-	 *         variables de classe…
+	 *         variables de classeï¿½
 	 */
 	public static int getNbreInstancesBis() {
 		return nbreInstances;
@@ -87,42 +87,42 @@ public class GVille2 {
 		this.categorie = categorie;
 	}
 
-	// Constructeur par défaut
+	// Constructeur par dï¿½faut
 	public GVille2() {
-		System.out.println("Création d'une ville !");
+		System.out.println("CrÃ©ation d'une ville !");
 		nomVille = "Inconnu";
 		nomPays = "Inconnu";
 		nbreHabitants = 0;
 		this.setCategorie();
-		// On incrémente nos variables à chaque appel aux constructeurs
+		// On incrï¿½mente nos variables ï¿½ chaque appel aux constructeurs
 		nbreInstances++;
 		nbreInstancesBis++;
 	}
 
-	// Constructeur avec paramètres
-	// J'ai ajouté un « p » en première lettre des paramètres.
-	// Ce n'est pas une convention, mais ça peut être un bon moyen de les
-	// repérer.
+	// Constructeur avec paramï¿½tres
+	// J'ai ajoutï¿½ un ï¿½ p ï¿½ en premiï¿½re lettre des paramï¿½tres.
+	// Ce n'est pas une convention, mais ï¿½a peut ï¿½tre un bon moyen de les
+	// repï¿½rer.
 	public GVille2(String pNom, int pNbre, String pPays)
 			throws NombreHabitantException, NomVilleException { // Attention ne permets pas de lever plusieurs exceptions mais l'une ou l'autre 
 
 		if (pNbre < 0)
 			throw new NombreHabitantException(pNbre);
 		if (pNom.length() <3)
-			throw new NomVilleException("Le nom de la ville est inferieur à 3 caracteres : "+pNom);
+			throw new NomVilleException("Le nom de la ville est inferieur Ã  3 caracteres : "+pNom);
 		else {
-			System.out.println("Création d'une ville avec des paramètres !");
+			System.out.println("CrÃ©ation d'une ville avec des paramÃ¨tres !");
 			nomVille = pNom;
 			nomPays = pPays;
 			nbreHabitants = pNbre;
 			this.setCategorie();
-			// On incrémente nos variables à chaque appel aux constructeurs
+			// On incrÃ©mente nos variables Ã  chaque appel aux constructeurs
 			nbreInstances++;
 			nbreInstancesBis++;
 		}
 	}
 
-	// Définit la catégorie de la ville
+	// Dï¿½finit la catï¿½gorie de la ville
 	private void setCategorie() {
 
 		int bornesSuperieures[] = { 0, 1000, 10000, 100000, 500000, 1000000,
@@ -141,45 +141,45 @@ public class GVille2 {
 	public String decrisToi() {
 		return "\t" + this.nomVille + " est une ville de " + this.nomPays
 				+ ", elle comporte : " + this.nbreHabitants
-				+ " habitant(s) => elle est donc de catégorie : "
+				+ " habitant(s) => elle est donc de catï¿½gorie : "
 				+ this.categorie;
 	}
 
 	public String toString() {
 		return "\t" + this.nomVille + " est une ville de " + this.nomPays
 				+ ", elle comporte : " + this.nbreHabitants
-				+ " => elle est donc de catégorie : " + this.categorie;
+				+ " => elle est donc de catï¿½gorie : " + this.categorie;
 	}
 
-	// Retourne une chaîne de caractères selon le résultat de la comparaison
+	// Retourne une chaï¿½ne de caractï¿½res selon le rï¿½sultat de la comparaison
 	public String comparer(GVille2 v1) {
 		String str = new String();
 
 		if (v1.getNbreHabitants() > this.nbreHabitants)
-			str = v1.getNomVille() + " est une ville plus peuplée que "
+			str = v1.getNomVille() + " est une ville plus peuplï¿½e que "
 					+ this.nomVille;
 
 		else
-			str = this.nomVille + " est une ville plus peuplée que "
+			str = this.nomVille + " est une ville plus peuplï¿½e que "
 					+ v1.getNomVille();
 
 		return str;
 	}
 
-	// redéfinition des méthodes hashCode() et equals()
+	// redï¿½finition des mï¿½thodes hashCode() et equals()
 
 	public int hashCode() {
-		// On définit un multiplication impair, de préférence un nombre premier
-		// Ceci afin de garantir l'unicité du résultat final
+		// On dï¿½finit un multiplication impair, de prï¿½fï¿½rence un nombre premier
+		// Ceci afin de garantir l'unicitï¿½ du rï¿½sultat final
 		final int prime = 31;
-		// On définit un résultat qui sera renvoyé au final
+		// On dï¿½finit un rï¿½sultat qui sera renvoyï¿½ au final
 		int result = 1;
 		// On ajoute en eux la multiplication des attributs et du multiplicateur
 		result = prime * result + categorie;
 		result = prime * result + nbreHabitants;
-		// Lorsque vous devez gérer des hashcodes avec des objets dans le mode
+		// Lorsque vous devez gï¿½rer des hashcodes avec des objets dans le mode
 		// de calcul
-		// Vous devez vérifier si l'objet n'est pas null, sinon vous aurez une
+		// Vous devez vï¿½rifier si l'objet n'est pas null, sinon vous aurez une
 		// erreur
 		result = prime * result + ((nomPays == null) ? 0 : nomPays.hashCode());
 		result = prime * result
@@ -188,18 +188,18 @@ public class GVille2 {
 	}
 
 	public boolean equals(Object obj) {
-		// On vérifie si les références d'objets sont identiques
+		// On vï¿½rifie si les rï¿½fï¿½rences d'objets sont identiques
 		if (this == obj)
 			return true;
 
-		// On vérifie si l'objet passé en paramètre est null
+		// On vï¿½rifie si l'objet passï¿½ en paramï¿½tre est null
 		if (obj == null)
 			return false;
 
-		// On s'assure que les objets sont du même type, ici de type Ville
-		// La méthode getClass retourne un objet Class qui représente la classe
+		// On s'assure que les objets sont du mï¿½me type, ici de type Ville
+		// La mï¿½thode getClass retourne un objet Class qui reprï¿½sente la classe
 		// de votre objet
-		// Nous verrons ça un peu plus tard...
+		// Nous verrons ï¿½a un peu plus tard...
 		if (getClass() != obj.getClass())
 			return false;
 
@@ -225,7 +225,7 @@ public class GVille2 {
 	}
 
 	public final int maMethode() {
-		// Méthode ne pouvant pas être surchargée
+		// Mï¿½thode ne pouvant pas ï¿½tre surchargï¿½e
 		return 2;
 	}
 }

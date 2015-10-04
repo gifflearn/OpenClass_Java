@@ -9,24 +9,25 @@ public class Test {
 		try {
 			System.out.println(j/i);
 		} catch (ArithmeticException e) {
-			// TODO: handle exception
-			// ceci est un nouveau commentaire
-			
-			System.out.println("Division par zéro  " + e.getMessage());
+					
+			System.out.println("Division par zÃ©ro  " + e.getMessage());
+			System.out.println("Coucou from catch");
 		}
-		System.out.println("Coucou\n\n");
+		System.out.println("\nCoucou main\n");
 		
 		//
 		System.out.println("Example 2\n");
 		try {
 			System.out.println("=> " + (1/0));
 		} catch (ClassCastException e) {
-			// TODO: handle exception
-			
 			e.printStackTrace();
-			System.out.println("Coucou");
+			System.out.println("Coucou from catch1");
+		} catch (ArithmeticException e) {
+			//e.printStackTrace();
+			System.out.println(e.getMessage());
+			System.out.println("Coucou from catch2");
 		} finally {
-		System.out.println("Coucou finally\n\n");
+		System.out.println("Coucou from finally\n\n");
 		}
 	}
 
